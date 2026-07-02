@@ -2,3 +2,8 @@
 growpart /dev/nvme0n1 ${partition_number}
 lvextend -r -L +${extend_size}G /dev/mapper/RootVG-homeVol
 xfs_growfs /home
+
+# install terraform
+sudo dnf install -y dnf-utils
+sudo dnf config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+sudo dnf install -y terraform
