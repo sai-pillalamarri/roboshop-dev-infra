@@ -5,6 +5,13 @@ if [ -z "$1" ]; then
 	echo "USAGE: sudo sh bootstrap.sh <component_name>"
 	exit 1
 fi
+
+if [ -z "$2" ]; then
+  echo "ERROR: environment name required"
+  echo "USAGE: sudo sh bootstrap.sh <component_name> <environment>"
+  exit 1
+fi
+
 component=$1
 environment=$2
 
