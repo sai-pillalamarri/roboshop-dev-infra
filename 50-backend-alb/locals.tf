@@ -9,4 +9,6 @@ locals {
   backend_alb_sg_id  = data.aws_ssm_parameter.backend_alb_sg_id.value
   private_subnet_ids = data.aws_ssm_parameter.private_subnet_ids.value
 
+  hosted_zone_id = data.aws_route53_zone.aslearnings.zone_id
+
 }
