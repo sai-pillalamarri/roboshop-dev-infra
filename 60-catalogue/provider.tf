@@ -10,7 +10,7 @@ terraform {
     key          = "roboshop-catalogue.tfstate"
     use_lockfile = true
     encrypt      = true
-    region       = "us-east-1a"
+    region       = "us-east-1"
 
   }
 }
