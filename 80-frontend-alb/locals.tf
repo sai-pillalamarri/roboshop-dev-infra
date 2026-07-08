@@ -7,6 +7,6 @@ locals {
     Environment = var.environment
     Terraform   = "true"
   }
-  acm_arn = data.aws_ssm_parameter.acm_arn
+  acm_arn = data.aws_ssm_parameter.acm_arn.value
   zone_id = data.aws_route53_zone.aslearnings.zone_id
 }

@@ -42,8 +42,8 @@ resource "aws_route53_record" "frontend_alb" {
   allow_overwrite = true
 
   alias {
-    name                   = aws_alb.frontend_alb
-    zone_id                = aws_alb.frontend_alb
+    name                   = aws_alb.frontend_alb.dns_name
+    zone_id                = aws_alb.frontend_alb.zone_id
     evaluate_target_health = true
   }
 
