@@ -21,7 +21,8 @@ resource "aws_alb_listener" "frontend_alb" {
   load_balancer_arn = aws_alb.frontend_alb.arn
   port              = "443"
   protocol          = "HTTPS"
-  ssl_policy        = local.acm_arn
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+  certificate_arn   = local.acm_arn
 
   default_action {
     type = "fixed-response"
