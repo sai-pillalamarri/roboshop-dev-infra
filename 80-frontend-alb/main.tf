@@ -29,7 +29,7 @@ resource "aws_alb_listener" "frontend_alb" {
     fixed_response {
       content_type = "text/plain"
       message_body = "Fixed response content"
-      status_code  = "200-299"
+      status_code  = "200"
     }
   }
 
