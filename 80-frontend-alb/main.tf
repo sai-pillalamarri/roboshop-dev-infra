@@ -38,7 +38,7 @@ resource "aws_alb_listener" "frontend_alb" {
 
 resource "aws_route53_record" "frontend_alb" {
   zone_id         = local.zone_id
-  name            = "frontend-alb-${var.environment}.aslearnings.online"
+  name            = "${var.project}-${var.environment}.aslearnings.online"
   type            = "A"
   allow_overwrite = true
 
