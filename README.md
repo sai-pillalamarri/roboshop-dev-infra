@@ -19,11 +19,11 @@ Each root has its own Terraform state. Later layers discover infrastructure crea
                                  |
                           Backend ALB
                                  |
-              +------------------+------------------+
-              |                  |                  |
-          Catalogue             User               Cart
-              |                  |                  |
-              +----------- Application Tier --------+
+              +------------------+------------------+--------------+-----------+
+              |                  |                  |              |           | 
+          Catalogue             User               Cart           Order      Payment
+              |                  |                  |              |           |
+              +----------- Application Tier --------+--------------+-----------+
                                  |
                  +---------------+---------------+
                  |               |               |
