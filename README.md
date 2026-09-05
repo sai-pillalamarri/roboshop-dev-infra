@@ -21,7 +21,7 @@ Each root has its own Terraform state. Later layers discover infrastructure crea
                                  |
               +------------------+------------------+--------------+-----------+
               |                  |                  |              |           | 
-          Catalogue             User               Cart           Order      Payment
+          Catalogue             User               Cart          shipping    Payment
               |                  |                  |              |           |
               +----------- Application Tier --------+--------------+-----------+
                                  |
